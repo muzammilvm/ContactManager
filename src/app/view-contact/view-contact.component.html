@@ -1,0 +1,38 @@
+<div class="container mt-4 title">
+    <div class="row">
+        <div class="col">
+            <h1>
+                <i class="fa-solid fa-eye"></i> View Contact Page
+            </h1>
+            <p style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officia asperiores ab modi illum incidunt
+                harum eaque rem architecto doloremque doloribus nobis temporibus commodi, velit quibusdam rerum
+                accusantium minus adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officia
+                asperiores ab modi illum incidunt
+                harum eaque rem architecto doloremque doloribus nobis temporibus commodi, velit quibusdam rerum
+                accusantium minus adipisci.
+            </p>
+        </div>
+    </div>
+</div>
+  <div class="container mt-4 mb-5">
+        <div class="row border p-5 align-items-center" >
+            <div class="col-md-4" >
+                <img [src]="contact.photo" alt="" class="contact-images">
+                <br>
+                <a routerLink="/" class="btn btn-warning button mt-3"><i class="fa-solid fa-circle-left" style="margin-right: 3px;"></i>Go back</a>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">Name: {{contact.name}}</li>
+                    <li class="list-group-item">Email: {{contact.email}}</li>
+                    <li class="list-group-item">Mobile: {{contact.mobile}}</li>
+                    <li class="list-group-item">Company: {{contact.company}}</li>
+                    <li class="list-group-item">Title: {{contact.title}}</li>
+                    <li class="list-group-item">Group: {{groupName}}</li>
+                  </ul>
+            </div>
+        </div>
+       
+
+  </div> 

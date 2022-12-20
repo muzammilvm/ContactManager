@@ -31,6 +31,7 @@ export class ContactManagerComponent implements OnInit {
     this.searchKey = event.target.value
   }
 
+  // function calling for deleting contact
   deleteContact(contactId: any) {
     this.api.deleteContact(contactId).subscribe((data: any) => {
       this.getAllContact()

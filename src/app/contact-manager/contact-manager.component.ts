@@ -10,11 +10,15 @@ import { ApiService } from '../services/api.service';
 export class ContactManagerComponent implements OnInit {
 
   allcontact: MyContact[] = []
-  searchKey:string=''
+  searchKey: string = ''
 
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
+   this.getAllContact()
+  }
+  //function for get all contact
+  getAllContact(){
     this.api.allContacts().subscribe((data: any) => {
       console.log(data);
       this.allcontact = data
@@ -22,9 +26,15 @@ export class ContactManagerComponent implements OnInit {
     })
   }
 
-  search(event:any){
+  search(event: any) {
     console.log(event.target.value);
-    this.searchKey=event.target.value    
+    this.searchKey = event.target.value
+  }
+
+  deleteContact(contactId: any) {
+    this.api.deleteContact(contactId).subscribe((data: any) => {
+      this.getAllContact()
+    })
   }
 
 

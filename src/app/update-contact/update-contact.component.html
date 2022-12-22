@@ -19,36 +19,44 @@
             <div class="col-md-4">
                 <form>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <label for="name"><b>Name</b></label>
+                        <input name="name" type="text" class="form-control" [(ngModel)]="contact.name">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Photo">
+                        <label for="photo"><b>Photo</b></label>
+                        <input type="text" name="photo" class="form-control" placeholder="Photo" [(ngModel)]="contact.photo">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Email">
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" name="email" class="form-control"  placeholder="Email" [(ngModel)]="contact.email">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Phone number">
+                        <label for="phone"><b>Phone number</b></label>
+                        <input type="text" name="phone" class="form-control" placeholder="Phone number" [(ngModel)]="contact.mobile">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Company Name">
+                        <label for="company"><b>Company</b></label>
+                        <input type="text" name="company" class="form-control" placeholder="Company Name" [(ngModel)]="contact.company">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="title">
+                        <label for="title"><b>Title</b></label>
+                        <input type="text" name="title" class="form-control" placeholder="title" [(ngModel)]="contact.title">
                     </div>
                     <div class="mb-2">
-                        <select name="" id="" class="form-control">
-                        <option value="">Select a Group</option>
-                        </select>
+                        <label for="name"><b>Group</b></label>
+                        <select name="groupId" [(ngModel)]="contact.groupId" id="" class="form-control">
+                        <!-- <option value="">{{groupName}}</option> -->
+                        <option [value]="group.id" *ngFor="let group of allGroups">{{group.name}}</option>
+                    </select>
                     </div>
                     <div class="mb-2">
-                        <input value="update" type="button" class="btn btn-success" placeholder="Name">
+                        <input value="update" (click)="updateContact()" type="button" class="btn btn-success" placeholder="Name">
                         <a routerLink="/" class="btn btn-warning ms-3">Close</a>
                     </div>
                 </form>
             </div>
             <div class="col-md-4">
-                <img src="https://i.pinimg.com/736x/de/59/4e/de594ec09881da3fa66d98384a3c72ff.jpg" alt="" class="contact-image">
+                <img [src]="contact.photo" alt="" class="contact-image">
 
             </div>
         </div>

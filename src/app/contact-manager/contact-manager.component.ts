@@ -33,6 +33,7 @@ export class ContactManagerComponent implements OnInit {
 
   // function calling for deleting contact
   deleteContact(contactId: any) {
+    confirm('are you sure want to delete this contact')
     this.api.deleteContact(contactId).subscribe((data: any) => {
       this.getAllContact()
     })

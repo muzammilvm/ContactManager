@@ -23,7 +23,7 @@ export class ViewContactComponent implements OnInit {
       console.log(this.contactId);
 
     })
-    // api cal 
+    // api call 
     this.api.viewContact(this.contactId).subscribe((data: any) => {
       console.log(data);
       this.contact = data

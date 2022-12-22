@@ -41,7 +41,7 @@
                     </div>
                     <div class="mb-2">
                         <select name="groupId" [(ngModel)]="contact.groupId" id="" class="form-control">
-                            <option value="" disabled selected hidden>Select group</option>
+                            <!-- <option value="" disabled selected>Select group</option> -->
                             <option value="{{group.id}}" *ngFor="let group of allGroups">{{group.name}}</option>
                         </select>
                     </div>

@@ -25,6 +25,7 @@ export class UpdateContactComponent {
       console.log(this.contactId);
 
     })
+    // function for get all contact
     this.api.getAllGroup().subscribe((data: any) => {
       console.log(data);
       this.allGroups = data
